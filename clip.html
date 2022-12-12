@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id='copy'>hello<h1>
+
+<script>
+document.getElementById("copy").addEventListener("click", async function() {
+    const makeImagePromise = async () => {
+        const response = await fetch('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png');
+        return await response.blob();
+    }
+
+    navigator.clipboard.write([new ClipboardItem({ "image/png": makeImagePromise() })])
+      .then(function () { alert('hg');console.log('copied'); })
+      .catch(function (error) { console.log(error); });
+});
+</script>
+
+</body>
+</html>
