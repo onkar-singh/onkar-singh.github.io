@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div id="id01" class="w3-container">
+  <div class="w3-modal" style='display: block;'>
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p id='btsms'>txt</p>
+      </div>
+    </div>
+  </div>
+</div>
+        
+<script>
+let mdl=document.getElementById('id01');
+let px=1;let invh;
+function timebw(h,fm,tm) {
+let d=new Date();
+let hx=d.getHours(),mx=d.getMinutes();
+
+if (hx==h&&mx>fm&&mx<tm) {
+let sms='wait for '+(tm-(mx+1))+'m '+(60-d.getSeconds())+'s';
+    console.log(h+':'+fm+' and '+h+':'+tm+') '+sms);
+   document.getElementById('btsms').innerHTML='Website in servicing '+sms;
+   if(px){
+   px=0;invh=setInterval(()=>{d=new Date();timebw(h,fm,tm)}, 1000);
+   mdl.style.display='block';
+   }
+   
+} else {
+    console.log('Time not b/w ('+h+':'+fm+') and ('+h+':'+tm+')');
+    clearInterval(invh);mdl.style.display='none';
+	}
+}
+
+timebw(6,00,28)
+
+</script>
