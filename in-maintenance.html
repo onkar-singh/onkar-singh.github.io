@@ -24,7 +24,7 @@ let hx=d.getHours(),mx=d.getMinutes();
 if (hx==h&&mx>fm&&mx<tm) {
 let sms='wait for '+(tm-(mx+1))+'m '+(60-d.getSeconds())+'s';
     console.log(h+':'+fm+' and '+h+':'+tm+') '+sms);
-   document.getElementById('btsms').innerHTML='<b>Website in servicing </b>'+sms;
+   document.getElementById('btsms').innerHTML='<b>Website in servicing... </b>'+sms;
    if(px){
    px=0;invh=setInterval(()=>{d=new Date();timebw(h,fm,tm)}, 1000);
    mdl.style.display='block';
