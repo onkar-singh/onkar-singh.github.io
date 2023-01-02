@@ -1,0 +1,27 @@
+href = origin + pathname + search + hash
+
+
+document.location.href or document.URL
+document.domain
+document.location.origin 
+document.location.pathname
+document.location.search
+document.location.hash
+
+
+
+href: "https://stackoverflow.com/questions/2255291/print-the-contents-of-a-div?page=1&tab=scoredesc#tab-top"
+
+protocol: "https:"
+host: "stackoverflow.com"
+hostname: "stackoverflow.com"
+origin: "https://stackoverflow.com"
+pathname: "/questions/2255291/print-the-contents-of-a-div"
+search: "?page=1&tab=scoredesc"
+hash: "#tab-top"
+port: ""
+
+
+assign: ƒ assign()  // window.location.assign("https://www.w3schools.com")
+reload: ƒ reload()
+replace: ƒ replace()

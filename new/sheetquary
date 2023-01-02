@@ -1,0 +1,31 @@
+https://docs.google.com/spreadsheets/d/1_D1ff1lCQcJuK8-2k6VoD290mvRvYeR42lAu4MKYigw/gviz/tq?tq=select+B+where+B+matches+'.*221215006.*'
+
+fetch("https://docs.google.com/spreadsheets/d/1_D1ff1lCQcJuK8-2k6VoD290mvRvYeR42lAu4MKYigw/gviz/tq?tq=select+B+where+B+matches+'.*221215006.*'")
+.then(x => x.text())
+.then(y => console.log(y));
+
+
+let urlty='https://docs.google.com/spreadsheets/d/1_D1ff1lCQcJuK8-2k6VoD290mvRvYeR42lAu4MKYigw/gviz/tq?tq=';
+fetch(urlty+"select+B+where+B+matches+'.*221215006.*'")
+.then(x => x.json())
+.then(y => console.log(y));
+
+
+select+B+where+B+matches+'.*221215006.*'
+select+B+where+A+matches+'221215006'
+select+B+where+A+contains+'221215006'
+
+
+var y = [1,2,3,4,5,6,7,8,9,10];
+console.log(y.slice((y.length - 5), y.length))
+
+
+
+arr.slice(-5)
+arr.slice(1).slice(-5)
+
+arr.slice(Math.max(arr.length - 5, 1))
+//If you don't want to exclude the first element, use
+arr.slice(Math.max(arr.length - 5, 0))
+
+
